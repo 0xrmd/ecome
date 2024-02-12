@@ -164,7 +164,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Checkbox(
                       value: true,
                       onChanged: (changed) {},
-                      activeColor: Colors.deepPurpleAccent,
+                      activeColor: AppColors.checkboxColorGreen,
                     )
                   ],
                 ),

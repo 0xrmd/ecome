@@ -177,7 +177,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         _isChecked = changed;
                       });
                     },
-                    activeColor: Colors.deepPurple,
+                    activeColor: AppColors.checkboxColorGreen,
                   )
                 ],
               ),

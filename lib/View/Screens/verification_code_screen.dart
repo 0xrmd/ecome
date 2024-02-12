@@ -70,6 +70,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
               height: ScreenSize.deviceHeight * 0.02,
             ),
             VerificationCode(
+              
               textStyle: Theme.of(context)
                   .textTheme
                   .bodyMedium!
@@ -90,6 +91,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 });
                 if (!_onEditing) FocusScope.of(context).unfocus();
               },
+              
             ),
             Center(
               child: TextButton(

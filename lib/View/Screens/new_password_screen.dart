@@ -4,22 +4,30 @@ import 'package:ecome/View/Widgets/text_field.dart';
 import 'package:ecome/View/common/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 
-class ForgetPasswordScreen extends StatefulWidget {
-  const ForgetPasswordScreen({super.key});
+class NewPasswordScreen extends StatefulWidget {
+  const NewPasswordScreen({super.key});
 
   @override
-  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
+  State<NewPasswordScreen> createState() => _NewPasswordScreenState();
 }
 
-class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
-  TextEditingController emailController = TextEditingController();
+class _NewPasswordScreenState extends State<NewPasswordScreen> {
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    emailController.text.trim();
+    passwordController.text.trim();
+    confirmPasswordController.text.trim();
   }
 
   @override
@@ -27,7 +35,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
     return Scaffold(
       bottomNavigationBar: BottomAction(
         onPressed: () {},
-        actionText: "Send Confirmation Code",
+        actionText: "Reset Password",
         actionTextStyle: GoogleFonts.inter(
             color: AppColors.primaryColor,
             decorationStyle: TextDecorationStyle.solid,
@@ -63,21 +71,21 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             ),
             Center(
               child: Text(
-                "Reset Password",
+                "New Password",
                 style: GoogleFonts.inter(
                   fontSize: 25,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
-            Image.asset('assets/images/forget_password.jpg',
-                height: ScreenSize.deviceHeight * 0.35,
-                width: ScreenSize.deviceWidth * 0.9),
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.1,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 25,
               ),
-              child: Text("Email Address",
+              child: Text("Password",
                   style: GoogleFonts.inter(
                     fontSize: 15,
                     color: AppColors.textColor,
@@ -89,17 +97,41 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomTextField(
-                  labelText: 'Email Address',
-                  controller: emailController,
+                  labelText: 'Password',
+                  controller: passwordController,
                   isPassword: false,
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType: TextInputType.visiblePassword,
+                )),
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.03,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 25,
+              ),
+              child: Text("Confirm Password",
+                  style: GoogleFonts.inter(
+                    fontSize: 15,
+                    color: AppColors.textColor,
+                  )),
+            ),
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.02,
+            ),
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: CustomTextField(
+                  labelText: 'Confirm Password',
+                  controller: confirmPasswordController,
+                  isPassword: false,
+                  keyboardType: TextInputType.visiblePassword,
                 )),
             SizedBox(
               height: ScreenSize.deviceHeight * 0.02,
             ),
             Center(
               child: Text(
-                'Please write your email to receive a confirmation code to\n set a new password.',
+                'Please write your new password.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.inter(
                     color: AppColors.subTextColor, fontSize: 12.5),
