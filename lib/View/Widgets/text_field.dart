@@ -8,11 +8,12 @@ class CustomTextField extends StatefulWidget {
       {super.key,
       required this.labelText,
       required this.controller,
-      required this.isPassword});
+      required this.isPassword,
+      required this.keyboardType});
   final String labelText;
   TextEditingController controller = TextEditingController();
   final bool isPassword;
-
+  final TextInputType keyboardType;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -37,26 +38,33 @@ class _CustomTextFieldState extends State<CustomTextField> {
       obscureText: widget.isPassword ? isObscure : false,
       controller: widget.controller,
       decoration: InputDecoration(
-        labelText: widget.labelText,
-        labelStyle: const TextStyle(
+        hintText: widget.labelText,
+        hintStyle: const TextStyle(
           color: Color.fromARGB(255, 117, 117, 118),
         ),
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Color.fromARGB(255, 90, 90, 91),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: AppColors.backgroundColor,
           ),
+          borderRadius: BorderRadius.circular(10),
         ),
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.grey.withOpacity(0.8),
-          ),
-        ),
+        enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.grey.withOpacity(0.8),
+            ),
+            borderRadius: BorderRadius.circular(10)),
         suffixIcon: widget.isPassword
             ? IconButton(
                 color: const Color.fromARGB(255, 129, 129, 129),
                 icon: isObscure
-                    ? const Icon(Icons.visibility_off)
-                    : const Icon(Icons.visibility),
+                    ? const Icon(
+                        Icons.visibility_off,
+                        color: AppColors.backgroundColor,
+                      )
+                    : const Icon(
+                        Icons.visibility,
+                        color: AppColors.backgroundColor,
+                      ),
                 onPressed: () {
                   setState(() {
                     isObscure = !isObscure;
@@ -65,6 +73,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               )
             : null,
       ),
+      keyboardType: widget.keyboardType,
     );
   }
 }

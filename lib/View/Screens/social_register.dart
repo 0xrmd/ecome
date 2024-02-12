@@ -18,8 +18,8 @@ class SocialRegisterScreen extends StatelessWidget {
         onPressed: () {},
         actionText: "Sign Up",
         normalText: "Create an Account With Email?",
-        normalTextColor: AppColors.primaryColor,
-        actionTextColor: AppColors.textColor,
+        normalTextStyle: const TextStyle(color: AppColors.primaryColor),
+        actionTextStyle: const TextStyle(color: AppColors.textColor),
       ),
       body: Column(
         children: [
@@ -38,7 +38,9 @@ class SocialRegisterScreen extends StatelessWidget {
                 ),
                 child: IconButton(
                   icon: const Icon(Icons.arrow_back),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
             ],
@@ -92,7 +94,7 @@ class SocialRegisterScreen extends StatelessWidget {
             onPressed: () {},
           ),
           SizedBox(
-            height: deviceHeight * 0.16,
+            height: deviceHeight * 0.13,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

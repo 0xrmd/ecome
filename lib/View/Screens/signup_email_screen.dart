@@ -1,3 +1,4 @@
+import 'package:ecome/Models/view%20Model/screen_size.dart';
 import 'package:ecome/View/Widgets/bottom_action.dart';
 import 'package:ecome/View/Widgets/text_field.dart';
 import 'package:ecome/View/common/app_colors.dart';
@@ -12,30 +13,42 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  TextEditingController userNameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    userNameController.text.trim();
+    passwordController.text.trim();
+    emailController.text.trim();
+  }
+
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
-    TextEditingController userNameController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
-    TextEditingController emailController = TextEditingController();
     return Scaffold(
         bottomNavigationBar: BottomAction(
           onPressed: () {},
           actionText: "Sign Up",
-          actionTextColor: Colors.white,
+          actionTextStyle: const TextStyle(color: AppColors.primaryColor),
         ),
         body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              const SizedBox(
-                height: 50,
+              SizedBox(
+                height: ScreenSize.deviceHeight * 0.06,
               ),
               Row(
                 children: [
                   SizedBox(
-                    width: deviceWidth * 0.035,
+                    width: ScreenSize.deviceWidth * 0.035,
                   ),
                   Container(
                     decoration: const BoxDecoration(
@@ -49,12 +62,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ],
               ),
-              const Text(
-                "Sign Up",
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+              const Center(
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+                ),
               ),
-              const SizedBox(
-                height: 15,
+              SizedBox(
+                height: ScreenSize.deviceHeight * 0.02,
               ),
               Text("Sign Up With Email to continue",
                   textAlign: TextAlign.center,
@@ -63,11 +78,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     fontWeight: FontWeight.w500,
                     color: Colors.grey.withOpacity(0.8),
                   )),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: ScreenSize.deviceHeight * 0.05,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25,
+                ),
+                child: Text("UserName",
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      color: AppColors.textColor,
+                    )),
               ),
               SizedBox(
-                height: deviceHeight * 0.05,
+                height: ScreenSize.deviceHeight * 0.02,
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -75,9 +100,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'UserName',
                     controller: userNameController,
                     isPassword: false,
+                    keyboardType: TextInputType.name,
                   )),
               SizedBox(
-                height: deviceHeight * 0.03,
+                height: ScreenSize.deviceHeight * 0.03,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25,
+                ),
+                child: Text("Password",
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      color: AppColors.textColor,
+                    )),
+              ),
+              SizedBox(
+                height: ScreenSize.deviceHeight * 0.02,
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -85,19 +124,32 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelText: 'Password',
                     controller: passwordController,
                     isPassword: true,
+                    keyboardType: TextInputType.visiblePassword,
                   )),
               SizedBox(
-                height: deviceHeight * 0.03,
+                height: ScreenSize.deviceHeight * 0.03,
               ),
               Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25,
+                ),
+                child: Text("Email Address",
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      color: AppColors.textColor,
+                    )),
+              ),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: CustomTextField(
                     labelText: 'Email Address',
                     controller: emailController,
                     isPassword: false,
+                    keyboardType: TextInputType.emailAddress,
                   )),
               SizedBox(
-                height: deviceHeight * 0.03,
+                height: ScreenSize.deviceHeight * 0.03,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

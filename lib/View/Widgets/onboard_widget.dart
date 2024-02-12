@@ -60,7 +60,7 @@ class OnBoardWidget extends StatelessWidget {
                     CustomButton(
                       deviceHeight: deviceHeight,
                       deviceWidth: deviceWidth,
-                      text: 'Men',
+                      text: 'Login',
                       color: const Color.fromARGB(255, 192, 194, 196),
                       onTap: () {},
                     ),
@@ -71,7 +71,7 @@ class OnBoardWidget extends StatelessWidget {
                     CustomButton(
                       deviceHeight: deviceHeight,
                       deviceWidth: deviceWidth,
-                      text: 'Women',
+                      text: 'Sign Up',
                       color: AppColors.backgroundColor,
                       onTap: () {},
                     ),
@@ -81,11 +81,17 @@ class OnBoardWidget extends StatelessWidget {
                   height: deviceHeight * 0.007,
                 ),
                 TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      "Skip",
-                      style: TextStyle(color: AppColors.subTextColor),
-                    )),
+                  child: Text(
+                    "Social Login? Click here",
+                    style: GoogleFonts.inter(
+                        color: AppColors.subTextColor,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/SocialLoginScreen');
+                  },
+                ),
               ],
             ))
       ],
