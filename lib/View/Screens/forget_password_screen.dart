@@ -1,0 +1,102 @@
+import 'package:ecome/Models/view%20Model/screen_size.dart';
+import 'package:ecome/View/Widgets/bottom_action.dart';
+import 'package:ecome/View/Widgets/text_field.dart';
+import 'package:ecome/View/common/app_colors.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+
+class ForgetPasswordScreen extends StatelessWidget {
+  const ForgetPasswordScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    TextEditingController emailController = TextEditingController();
+
+    return Scaffold(
+      bottomNavigationBar: BottomAction(
+        onPressed: () {},
+        actionText: "Send Confirmation Code",
+        actionTextStyle: GoogleFonts.inter(
+            color: AppColors.primaryColor,
+            decorationStyle: TextDecorationStyle.solid,
+            decorationColor: AppColors.primaryColor),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.06,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: ScreenSize.deviceWidth * 0.035,
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.buttonsColorGrey,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back),
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.005,
+            ),
+            Center(
+              child: Text(
+                "Reset Password",
+                style: GoogleFonts.inter(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Image.asset('assets/images/forget_password.jpg',
+                height: ScreenSize.deviceHeight * 0.35,
+                width: ScreenSize.deviceWidth * 0.9),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 25,
+              ),
+              child: Text("Email Address",
+                  style: GoogleFonts.inter(
+                    fontSize: 15,
+                    color: AppColors.textColor,
+                  )),
+            ),
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.02,
+            ),
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: CustomTextField(
+                  labelText: 'Email Address',
+                  controller: emailController,
+                  isPassword: false,
+                  keyboardType: TextInputType.emailAddress,
+                )),
+            SizedBox(
+              height: ScreenSize.deviceHeight * 0.02,
+            ),
+            Center(
+              child: Text(
+                'Please write your email to receive a confirmation code to\n set a new password.',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.inter(
+                    color: AppColors.subTextColor, fontSize: 12.5),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
