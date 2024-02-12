@@ -1,6 +1,7 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
 import 'package:ecome/View/Screens/forget_password_screen.dart';
 import 'package:ecome/View/Screens/social_register.dart';
+import 'package:ecome/View/Screens/verification_code_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         routes: {
-          '/': (context) => const ForgetPasswordScreen(),
+          '/': (context) => const VerificationScreen(),
           '/SocialLoginScreen': (context) => const SocialRegisterScreen(),
         });
   }
