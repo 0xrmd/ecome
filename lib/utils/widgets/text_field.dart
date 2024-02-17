@@ -3,18 +3,24 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomTextField extends StatefulWidget {
-  CustomTextField(
-      {super.key,
-      required this.labelText,
-      required this.controller,
-      required this.isPassword,
-      required this.keyboardType,
-      required this.isSearch});
+  CustomTextField({
+    super.key,
+    required this.labelText,
+    required this.controller,
+    required this.isPassword,
+    required this.keyboardType,
+    required this.isSearch,
+    this.focusBorder,
+    this.enableBorder,
+  });
   final String labelText;
   TextEditingController controller = TextEditingController();
   final bool isPassword;
   final TextInputType keyboardType;
   final bool isSearch;
+  InputBorder? focusBorder;
+  InputBorder? enableBorder;
+
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -52,17 +58,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   color: AppColors.subTextColor,
                 ))
             : null,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: AppColors.backgroundColor,
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.grey.withOpacity(0.8),
-            ),
-            borderRadius: BorderRadius.circular(10)),
+        focusedBorder: widget.focusBorder,
+        enabledBorder: widget.enableBorder,
         suffixIcon: widget.isPassword
             ? IconButton(
                 color: const Color.fromARGB(255, 129, 129, 129),
