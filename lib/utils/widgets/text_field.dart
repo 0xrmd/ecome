@@ -1,6 +1,5 @@
+import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
-
-import '../common/app_colors.dart';
 
 // ignore: must_be_immutable
 class CustomTextField extends StatefulWidget {
@@ -9,11 +8,13 @@ class CustomTextField extends StatefulWidget {
       required this.labelText,
       required this.controller,
       required this.isPassword,
-      required this.keyboardType});
+      required this.keyboardType,
+      required this.isSearch});
   final String labelText;
   TextEditingController controller = TextEditingController();
   final bool isPassword;
   final TextInputType keyboardType;
+  final bool isSearch;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -42,6 +43,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
         hintStyle: const TextStyle(
           color: Color.fromARGB(255, 117, 117, 118),
         ),
+        prefixIcon: widget.isSearch
+            ? const Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Icon(
+                  Icons.search,
+                  weight: 25,
+                  color: AppColors.subTextColor,
+                ))
+            : null,
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: AppColors.backgroundColor,

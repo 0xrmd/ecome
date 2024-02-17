@@ -1,4 +1,4 @@
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {

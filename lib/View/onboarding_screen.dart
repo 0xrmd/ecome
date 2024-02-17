@@ -1,4 +1,4 @@
-import 'package:ecome/View/Widgets/onboard_widget.dart';
+import 'package:ecome/utils/widgets/onboard_widget.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatefulWidget {

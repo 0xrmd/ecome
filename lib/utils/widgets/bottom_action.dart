@@ -1,5 +1,5 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class BottomAction extends StatelessWidget {

@@ -1,10 +1,9 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
-import 'package:ecome/View/Widgets/bottom_action.dart';
-import 'package:ecome/View/Widgets/text_field.dart';
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
+import 'package:ecome/utils/widgets/bottom_action.dart';
+import 'package:ecome/utils/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
   const ForgetPasswordScreen({super.key});
@@ -17,7 +16,6 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   TextEditingController emailController = TextEditingController();
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     emailController.text.trim();
   }
@@ -89,6 +87,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomTextField(
+                  isSearch: false,
                   labelText: 'Email Address',
                   controller: emailController,
                   isPassword: false,

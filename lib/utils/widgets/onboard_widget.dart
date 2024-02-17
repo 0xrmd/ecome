@@ -1,5 +1,5 @@
-import 'package:ecome/View/Widgets/custom_buttton.dart';
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
+import 'package:ecome/utils/widgets/custom_buttton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,6 +1,6 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
-import 'package:ecome/View/Widgets/bottom_action.dart';
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
+import 'package:ecome/utils/widgets/bottom_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,7 +70,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
               height: ScreenSize.deviceHeight * 0.02,
             ),
             VerificationCode(
-              
               textStyle: Theme.of(context)
                   .textTheme
                   .bodyMedium!
@@ -91,7 +90,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 });
                 if (!_onEditing) FocusScope.of(context).unfocus();
               },
-              
             ),
             Center(
               child: TextButton(

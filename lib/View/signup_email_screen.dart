@@ -1,7 +1,7 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
-import 'package:ecome/View/Widgets/bottom_action.dart';
-import 'package:ecome/View/Widgets/text_field.dart';
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
+import 'package:ecome/utils/widgets/bottom_action.dart';
+import 'package:ecome/utils/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -97,6 +97,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: CustomTextField(
+                                      isSearch: false,
+
                     labelText: 'UserName',
                     controller: userNameController,
                     isPassword: false,
@@ -121,6 +123,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: CustomTextField(
+                                      isSearch: false,
+
                     labelText: 'Password',
                     controller: passwordController,
                     isPassword: true,
@@ -143,6 +147,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: CustomTextField(
+                                      isSearch: false,
+
                     labelText: 'Email Address',
                     controller: emailController,
                     isPassword: false,

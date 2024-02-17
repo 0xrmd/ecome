@@ -1,10 +1,9 @@
-import 'package:ecome/View/Widgets/social_login.dart';
-import 'package:ecome/View/common/app_colors.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
+import 'package:ecome/utils/widgets/bottom_action.dart';
+import 'package:ecome/utils/widgets/social_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../Widgets/bottom_action.dart';
 
 class SocialRegisterScreen extends StatelessWidget {
   const SocialRegisterScreen({super.key});
