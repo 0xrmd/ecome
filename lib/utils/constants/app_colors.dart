@@ -8,4 +8,5 @@ class AppColors {
   static const primaryColor = Color(0xFFFEFEFE);
   static const buttonsColorGrey = Color(0xFFF5F6FA);
   static const checkboxColorGreen = Color(0xFF4BC76D);
+  static const redColor = Color(0xFFE74C3C);
 }

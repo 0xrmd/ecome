@@ -97,8 +97,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: CustomTextField(
-                                      isSearch: false,
-
+                    isSearch: false,
                     labelText: 'UserName',
                     controller: userNameController,
                     isPassword: false,
@@ -123,8 +122,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: CustomTextField(
-                                      isSearch: false,
-
+                    isSearch: false,
                     labelText: 'Password',
                     controller: passwordController,
                     isPassword: true,
@@ -147,8 +145,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: CustomTextField(
-                                      isSearch: false,
-
+                    isSearch: false,
                     labelText: 'Email Address',
                     controller: emailController,
                     isPassword: false,
@@ -167,11 +164,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           fontSize: 15,
                           color: AppColors.textColor,
                         )),
-                    Checkbox(
-                      value: true,
-                      onChanged: (changed) {},
-                      activeColor: AppColors.checkboxColorGreen,
-                    )
+                    Switch(value: false, onChanged: (value) {}),
                   ],
                 ),
               ),
