@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // F5F6FA
+  // 8F959E
   static const backgroundColor = Color(0xFF9775FA);
   static const subTextColor = Color(0xFF8F959E);
   static const textColor = Color(0xFF1D1E20);
@@ -9,4 +9,5 @@ class AppColors {
   static const buttonsColorGrey = Color(0xFFF5F6FA);
   static const checkboxColorGreen = Color(0xFF4BC76D);
   static const redColor = Color(0xFFE74C3C);
+  static const softGrey = Color(0xFF8F959E);
 }

@@ -4,7 +4,18 @@ import 'package:flutter_svg/svg.dart';
 
 class DrawerCartWidget extends StatelessWidget {
   final BuildContext context;
-  const DrawerCartWidget({super.key, required this.context});
+  final Widget firstIcon;
+  final Widget secondIcon;
+  final Function() firstIconOnPressed;
+  final Function() secondIconOnPressed;
+  const DrawerCartWidget({
+    super.key,
+    required this.context,
+    required this.firstIcon,
+    required this.secondIcon,
+    required this.firstIconOnPressed,
+    required this.secondIconOnPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +26,10 @@ class DrawerCartWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          IconButton(icon: firstIcon, onPressed: firstIconOnPressed),
           IconButton(
-            icon: SvgPicture.asset("assets/icons/Menu.svg"),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          ),
-          IconButton(
-            icon: SvgPicture.asset("assets/icons/Cart.svg"),
-            onPressed: () {},
+            icon: secondIcon,
+            onPressed: secondIconOnPressed,
           ),
         ],
       ),

@@ -6,6 +6,7 @@ import 'package:ecome/utils/widgets/drawer_and_cart.dart';
 import 'package:ecome/utils/widgets/product.dart';
 import 'package:ecome/utils/widgets/search_input.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   //* This is For Controller of the Search Input
   TextEditingController searchController = TextEditingController();
   //* This is for the List of Products
+
   List<Product> items = [
     const Product(
         productImage: 'assets/images/product_1.png',
@@ -47,6 +49,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               DrawerCartWidget(
                 context: context,
+                firstIcon: SvgPicture.asset("assets/icons/Menu.svg"),
+                secondIcon: SvgPicture.asset("assets/icons/Cart.svg"),
+                firstIconOnPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                secondIconOnPressed: () {},
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
