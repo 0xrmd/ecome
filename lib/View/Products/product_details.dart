@@ -42,6 +42,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               height: ScreenSize.deviceHeight * 0.6,
               width: ScreenSize.deviceWidth,
               decoration: const BoxDecoration(
+                color: AppColors.primaryColor,
                 image: DecorationImage(
                   image: NetworkImage(
                       "https://i0.wp.com/cosmosalgerie.com/wp-content/uploads/2024/01/1-5.png?fit=750%2C900&ssl=1"),
@@ -164,25 +165,41 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ],
                     ),
 
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ProductSize(
-                          size: "S",
-                        ),
-                        ProductSize(
-                          size: "M",
-                        ),
-                        ProductSize(
-                          size: "L",
-                        ),
-                        ProductSize(
-                          size: "XL",
-                        ),
-                        ProductSize(
-                          size: "2XL",
-                        ),
-                      ],
+                    SizedBox(
+                      height: ScreenSize.deviceHeight * 0.08,
+                      width: ScreenSize.deviceWidth,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: const [
+                          ProductSize(
+                            size: "S",
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ProductSize(
+                            size: "M",
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ProductSize(
+                            size: "L",
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ProductSize(
+                            size: "XL",
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          ProductSize(
+                            size: "2XL",
+                          ),
+                        ],
+                      ),
                     ),
                     //? Product Description
                     SizedBox(
@@ -237,6 +254,27 @@ class _ProductDetailsState extends State<ProductDetails> {
                     SizedBox(
                       width: ScreenSize.deviceWidth,
                       child: const SingleReview(),
+                    ),
+                    SizedBox(
+                      height: ScreenSize.deviceHeight * 0.02,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Total Price",
+                            style: GoogleFonts.inter(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.textColor)),
+                        Text("4600 DZD",
+                            style: GoogleFonts.inter(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.textColor)),
+                      ],
+                    ),
+                    SizedBox(
+                      height: ScreenSize.deviceHeight * 0.01,
                     )
                   ],
                 ),

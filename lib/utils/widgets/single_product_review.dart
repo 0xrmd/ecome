@@ -3,6 +3,7 @@ import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:readmore/readmore.dart';
 
 class SingleReview extends StatefulWidget {
   const SingleReview({super.key});
@@ -110,35 +111,20 @@ class _SingleReviewState extends State<SingleReview> {
       ),
       SizedBox(
         width: ScreenSize.deviceWidth,
-        child: Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada eget vitae amet",
-            style: GoogleFonts.inter(
-              fontSize: 14.5,
-              color: AppColors.subTextColor,
-            ),
-            textAlign: TextAlign.start),
+        child: SizedBox(
+          width: ScreenSize.deviceWidth,
+          child: ReadMoreText(
+            "Faut réviser vos desings la qualité est au rendez-vous mais la conception faut mettre un peu plus de créativité, bon courage",
+            trimLines: 3,
+            colorClickableText: AppColors.textColor,
+            trimMode: TrimMode.Line,
+            trimCollapsedText: 'Read more',
+            trimExpandedText: 'Read less',
+            style:
+                GoogleFonts.inter(fontSize: 15, color: AppColors.subTextColor),
+          ),
+        ),
       ),
-      SizedBox(
-        height: ScreenSize.deviceHeight * 0.02,
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text("Total Price",
-              style: GoogleFonts.inter(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.textColor)),
-          Text("4600 DZD",
-              style: GoogleFonts.inter(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.textColor)),
-        ],
-      ),
-      SizedBox(
-        height: ScreenSize.deviceHeight * 0.01,
-      )
     ]);
   }
 }

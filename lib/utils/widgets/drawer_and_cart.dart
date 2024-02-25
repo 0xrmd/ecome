@@ -1,6 +1,6 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
+import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DrawerCartWidget extends StatelessWidget {
   final BuildContext context;
@@ -21,16 +21,29 @@ class DrawerCartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-          horizontal: ScreenSize.deviceWidth * 0.005,
-          vertical: ScreenSize.deviceHeight * 0.01),
+        horizontal: ScreenSize.deviceWidth * 0.005,
+        vertical: ScreenSize.deviceHeight * 0.01,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconButton(icon: firstIcon, onPressed: firstIconOnPressed),
-          IconButton(
-            icon: secondIcon,
-            onPressed: secondIconOnPressed,
+          Container(
+            decoration: BoxDecoration(
+              color: AppColors.buttonsColorGrey,
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: IconButton(onPressed: firstIconOnPressed, icon: firstIcon),
           ),
+          Container(
+            decoration: BoxDecoration(
+              color: AppColors.buttonsColorGrey,
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: IconButton(
+              onPressed: secondIconOnPressed,
+              icon: secondIcon,
+            ),
+          )
         ],
       ),
     );
