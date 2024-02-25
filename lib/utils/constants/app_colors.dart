@@ -10,4 +10,5 @@ class AppColors {
   static const checkboxColorGreen = Color(0xFF4BC76D);
   static const redColor = Color(0xFFE74C3C);
   static const softGrey = Color(0xFF8F959E);
+  static const orange= Color(0xFFFF7043);
 }

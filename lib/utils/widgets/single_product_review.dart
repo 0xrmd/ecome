@@ -16,112 +16,119 @@ class _SingleReviewState extends State<SingleReview> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Row(
-        children: [
-          const CircleAvatar(
-            radius: 20,
-            backgroundImage: NetworkImage(
-              'https://randomuser.me/api/portraits/lego/4.jpg',
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Row(
+          children: [
+            const CircleAvatar(
+              radius: 20,
+              backgroundImage: NetworkImage(
+                'https://randomuser.me/api/portraits/lego/4.jpg',
+              ),
             ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: ScreenSize.deviceWidth * 0.8,
-                child: Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        'Mohamed Rami',
-                        style: GoogleFonts.inter(
-                          fontSize: 14.5,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.textColor,
+            const SizedBox(
+              width: 10,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: ScreenSize.deviceWidth * 0.8,
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'Mohamed Rami',
+                          style: GoogleFonts.inter(
+                            fontSize: 14.5,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.textColor,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Rating',
-                        style: GoogleFonts.inter(
-                          fontSize: 14,
-                          color: AppColors.softGrey,
+                        Text(
+                          '4.5 Rating',
+                          style: GoogleFonts.inter(
+                            fontSize: 14,
+                            color: AppColors.softGrey,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: ScreenSize.deviceHeight * 0.006,
-              ),
-              SizedBox(
-                width: ScreenSize.deviceWidth * 0.8,
-                child: Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset(
-                            'assets/icons/clock.png',
-                            height: 15,
-                            width: 15,
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}',
-                            style: GoogleFonts.inter(
-                              fontSize: 12.5,
-                              color: AppColors.softGrey,
+                SizedBox(
+                  height: ScreenSize.deviceHeight * 0.006,
+                ),
+                SizedBox(
+                  width: ScreenSize.deviceWidth * 0.8,
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/icons/clock.png',
+                              height: 15,
+                              width: 15,
                             ),
-                          ),
-                        ],
-                      ),
-                      RatingBar.builder(
-                        initialRating: 3,
-                        minRating: 1,
-                        itemSize: 17,
-                        direction: Axis.horizontal,
-                        allowHalfRating: true,
-                        itemCount: 5,
-                        itemPadding:
-                            const EdgeInsets.symmetric(horizontal: 1.0),
-                        itemBuilder: (context, _) => const Icon(
-                          Icons.favorite,
-                          color: Colors.amber,
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}',
+                              style: GoogleFonts.inter(
+                                fontSize: 12.5,
+                                color: AppColors.softGrey,
+                              ),
+                            ),
+                          ],
                         ),
-                        onRatingUpdate: (rating) {},
-                      ),
-                    ],
+                        RatingBar.builder(
+                          initialRating: 3,
+                          minRating: 1,
+                          itemSize: 17,
+                          direction: Axis.horizontal,
+                          allowHalfRating: true,
+                          itemCount: 5,
+                          itemPadding:
+                              const EdgeInsets.symmetric(horizontal: 0.5),
+                          itemBuilder: (context, _) => Image.asset(
+                            'assets/icons/Star.png',
+                            color: Colors.amber,
+                            width: 13,
+                          ),
+                          onRatingUpdate: (rating) {},
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              )
-            ],
-          ),
-        ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
       SizedBox(
         height: ScreenSize.deviceHeight * 0.015,
       ),
-      SizedBox(
-        width: ScreenSize.deviceWidth,
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SizedBox(
           width: ScreenSize.deviceWidth,
-          child: ReadMoreText(
-            "Faut réviser vos desings la qualité est au rendez-vous mais la conception faut mettre un peu plus de créativité, bon courage",
-            trimLines: 3,
-            colorClickableText: AppColors.textColor,
-            trimMode: TrimMode.Line,
-            trimCollapsedText: 'Read more',
-            trimExpandedText: 'Read less',
-            style:
-                GoogleFonts.inter(fontSize: 15, color: AppColors.subTextColor),
+          child: SizedBox(
+            width: ScreenSize.deviceWidth,
+            child: ReadMoreText(
+              "Faut réviser vos desings la qualité est au rendez-vous mais la conception faut mettre un peu plus de créativité, bon courage",
+              trimLines: 3,
+              colorClickableText: AppColors.textColor,
+              trimMode: TrimMode.Line,
+              trimCollapsedText: 'Read more',
+              trimExpandedText: 'Read less',
+              style: GoogleFonts.inter(
+                  fontSize: 15, color: AppColors.subTextColor),
+            ),
           ),
         ),
       ),
