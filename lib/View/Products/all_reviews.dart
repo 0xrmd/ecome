@@ -76,7 +76,9 @@ class AllReviews extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const AddReview(),
+                    AddReview(
+                      onPressed: () {},
+                    ),
                   ],
                 ),
               ),
@@ -86,7 +88,7 @@ class AllReviews extends StatelessWidget {
               SizedBox(
                 height: ScreenSize.deviceHeight,
                 child: ListView.builder(
-                  itemCount: 15,
+                  itemCount: 6,
                   itemBuilder: (context, index) {
                     return const Padding(
                       padding: EdgeInsets.only(bottom: 55),

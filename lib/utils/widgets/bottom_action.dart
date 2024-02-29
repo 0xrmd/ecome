@@ -21,10 +21,6 @@ class BottomAction extends StatelessWidget {
         height: ScreenSize.deviceHeight * 0.1,
         decoration: const BoxDecoration(
           color: AppColors.backgroundColor,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
