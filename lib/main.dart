@@ -1,6 +1,6 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
 import 'package:ecome/View/Auth/social_register.dart';
-import 'package:ecome/View/Cart/cart.dart';
+import 'package:ecome/View/order/order_confirmed.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         routes: {
-          '/': (context) => const CartScreen(),
+          '/': (context) => const OrderConfirmed(),
           '/SocialLoginScreen': (context) => const SocialRegisterScreen(),
         });
   }

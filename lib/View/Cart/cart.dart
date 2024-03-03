@@ -38,10 +38,10 @@ class CartScreen extends StatelessWidget {
           const SingleProductInCart(
             color: Colors.white,
           ),
-
           //? Shipping Section
-          const SubTitleAndIcon(
+          SubTitleAndIcon(
             title: 'Shipping Address',
+            onPressed: () {},
           ),
           SizedBox(
             height: ScreenSize.screenHeight * 0.01,
@@ -72,8 +72,9 @@ class CartScreen extends StatelessWidget {
           SizedBox(
             height: ScreenSize.screenHeight * 0.01,
           ),
-          const SubTitleAndIcon(
+          SubTitleAndIcon(
             title: 'Payment Method',
+            onPressed: () {},
           ),
           SizedBox(
             height: ScreenSize.screenHeight * 0.01,

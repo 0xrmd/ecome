@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton(
+  CustomButton(
       {super.key,
       required this.deviceHeight,
       required this.deviceWidth,
       required this.text,
       this.onTap,
-      this.color});
+      this.color,
+      this.textColor});
   final double deviceHeight;
   final double deviceWidth;
   final Function()? onTap;
+  Color? textColor = Colors.white;
   final String text;
   final Color? color;
   @override
@@ -30,7 +32,7 @@ class CustomButton extends StatelessWidget {
             text,
             style: GoogleFonts.inter(
               fontSize: 16,
-              color: Colors.white,
+              color: textColor,
               fontWeight: FontWeight.w600,
             ),
           ),
