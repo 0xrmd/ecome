@@ -11,8 +11,8 @@ class AddReview extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: ScreenSize.deviceHeight * 0.06,
-        width: ScreenSize.deviceWidth * 0.35,
+        height: ScreenSize.screenHeight * 0.06,
+        width: ScreenSize.screenWidth * 0.35,
         alignment: Alignment.center,
         decoration: BoxDecoration(
             color: AppColors.orange, borderRadius: BorderRadius.circular(10)),

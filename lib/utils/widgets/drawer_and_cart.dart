@@ -21,8 +21,8 @@ class DrawerCartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: ScreenSize.deviceWidth * 0.005,
-        vertical: ScreenSize.deviceHeight * 0.01,
+        horizontal: ScreenSize.screenWidth * 0.005,
+        vertical: ScreenSize.screenHeight * 0.01,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

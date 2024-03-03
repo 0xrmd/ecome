@@ -20,7 +20,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
       child: ListView(
         children: [
           SizedBox(
-            height: ScreenSize.deviceHeight * 0.02,
+            height: ScreenSize.screenHeight * 0.02,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -39,7 +39,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ],
           ),
           SizedBox(
-            height: ScreenSize.deviceHeight * 0.02,
+            height: ScreenSize.screenHeight * 0.02,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -86,19 +86,19 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ],
           ),
           SizedBox(
-            height: ScreenSize.deviceHeight * 0.03,
+            height: ScreenSize.screenHeight * 0.03,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                width: ScreenSize.deviceWidth * 0.04,
+                width: ScreenSize.screenWidth * 0.04,
               ),
               SvgPicture.asset("assets/icons/dark_mode.svg"),
               const SizedBox(width: 10),
               Text("Dark Mode", style: GoogleFonts.inter(fontSize: 16)),
               SizedBox(
-                width: ScreenSize.deviceWidth * 0.25,
+                width: ScreenSize.screenWidth * 0.25,
               ),
               Switch(
                 value: checkedValue,
@@ -138,7 +138,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             onTap: () {},
           ),
           SizedBox(
-            height: ScreenSize.deviceHeight * 0.01,
+            height: ScreenSize.screenHeight * 0.01,
           ),
           ListTile(
             title: Text(

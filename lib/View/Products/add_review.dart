@@ -41,7 +41,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.05,
+                height: ScreenSize.screenHeight * 0.05,
               ),
               Text(
                 "Name",
@@ -108,7 +108,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.05,
+                height: ScreenSize.screenHeight * 0.05,
               ),
               Row(
                 children: [
@@ -120,7 +120,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
                         color: AppColors.textColor),
                   ),
                   SizedBox(
-                    width: ScreenSize.deviceWidth * 0.015,
+                    width: ScreenSize.screenWidth * 0.015,
                   ),
                   const Text(
                     "Star",

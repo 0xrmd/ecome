@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.01,
+                height: ScreenSize.screenHeight * 0.01,
               ),
               DrawerCartWidget(
                 context: context,
@@ -74,11 +74,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   )),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.02,
+                height: ScreenSize.screenHeight * 0.02,
               ),
               SearchInput(searchController: searchController),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.001,
+                height: ScreenSize.screenHeight * 0.001,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.01,
+                height: ScreenSize.screenHeight * 0.01,
               ),
               SizedBox(
                 height: 60,
@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.02,
+                height: ScreenSize.screenHeight * 0.02,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),

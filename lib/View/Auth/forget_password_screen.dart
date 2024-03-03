@@ -37,12 +37,12 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.06,
+              height: ScreenSize.screenHeight * 0.06,
             ),
             Row(
               children: [
                 SizedBox(
-                  width: ScreenSize.deviceWidth * 0.035,
+                  width: ScreenSize.screenWidth * 0.035,
                 ),
                 Container(
                   decoration: const BoxDecoration(
@@ -57,7 +57,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ],
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.005,
+              height: ScreenSize.screenHeight * 0.005,
             ),
             Center(
               child: Text(
@@ -69,8 +69,8 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ),
             ),
             Image.asset('assets/images/forget_password.jpg',
-                height: ScreenSize.deviceHeight * 0.35,
-                width: ScreenSize.deviceWidth * 0.9),
+                height: ScreenSize.screenHeight * 0.35,
+                width: ScreenSize.screenWidth * 0.9),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 25,
@@ -82,7 +82,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   )),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -94,7 +94,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   keyboardType: TextInputType.emailAddress,
                 )),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Center(
               child: Text(

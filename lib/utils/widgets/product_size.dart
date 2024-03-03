@@ -10,8 +10,8 @@ class ProductSize extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      height: ScreenSize.deviceHeight * 0.08,
-      width: ScreenSize.deviceWidth * 0.17,
+      height: ScreenSize.screenHeight * 0.08,
+      width: ScreenSize.screenWidth * 0.17,
       decoration: BoxDecoration(
           color: AppColors.primaryColor,
           borderRadius: BorderRadius.circular(5)),

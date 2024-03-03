@@ -43,12 +43,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.06,
+                height: ScreenSize.screenHeight * 0.06,
               ),
               Row(
                 children: [
                   SizedBox(
-                    width: ScreenSize.deviceWidth * 0.035,
+                    width: ScreenSize.screenWidth * 0.035,
                   ),
                   Container(
                     decoration: const BoxDecoration(
@@ -69,7 +69,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.02,
+                height: ScreenSize.screenHeight * 0.02,
               ),
               Text("Sign Up With Email to continue",
                   textAlign: TextAlign.center,
@@ -79,7 +79,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     color: Colors.grey.withOpacity(0.8),
                   )),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.05,
+                height: ScreenSize.screenHeight * 0.05,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -92,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     )),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.02,
+                height: ScreenSize.screenHeight * 0.02,
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -104,7 +104,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     keyboardType: TextInputType.name,
                   )),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.03,
+                height: ScreenSize.screenHeight * 0.03,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -117,7 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     )),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.02,
+                height: ScreenSize.screenHeight * 0.02,
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -129,7 +129,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     keyboardType: TextInputType.visiblePassword,
                   )),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.03,
+                height: ScreenSize.screenHeight * 0.03,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -152,7 +152,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     keyboardType: TextInputType.emailAddress,
                   )),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.03,
+                height: ScreenSize.screenHeight * 0.03,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

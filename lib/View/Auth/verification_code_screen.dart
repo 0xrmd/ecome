@@ -32,12 +32,12 @@ class _VerificationScreenState extends State<VerificationScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.06,
+              height: ScreenSize.screenHeight * 0.06,
             ),
             Row(
               children: [
                 SizedBox(
-                  width: ScreenSize.deviceWidth * 0.035,
+                  width: ScreenSize.screenWidth * 0.035,
                 ),
                 Container(
                   decoration: const BoxDecoration(
@@ -52,7 +52,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ],
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.005,
+              height: ScreenSize.screenHeight * 0.005,
             ),
             Center(
               child: Text(
@@ -64,10 +64,10 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ),
             ),
             Image.asset('assets/images/forget_password.jpg',
-                height: ScreenSize.deviceHeight * 0.35,
-                width: ScreenSize.deviceWidth * 0.9),
+                height: ScreenSize.screenHeight * 0.35,
+                width: ScreenSize.screenWidth * 0.9),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             VerificationCode(
               textStyle: Theme.of(context)

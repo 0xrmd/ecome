@@ -14,9 +14,9 @@ class SubProductImage extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         alignment: Alignment.center,
-        height: ScreenSize.deviceHeight * 0.15,
-        width: ScreenSize.deviceWidth * 0.3,
-        margin: EdgeInsets.symmetric(horizontal: ScreenSize.deviceWidth * 0.03),
+        height: ScreenSize.screenHeight * 0.15,
+        width: ScreenSize.screenWidth * 0.3,
+        margin: EdgeInsets.symmetric(horizontal: ScreenSize.screenWidth * 0.03),
         decoration: BoxDecoration(
             color: AppColors.primaryColor,
             borderRadius: BorderRadius.circular(15),

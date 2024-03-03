@@ -33,7 +33,7 @@ class _SingleReviewState extends State<SingleReview> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: ScreenSize.deviceWidth * 0.8,
+                  width: ScreenSize.screenWidth * 0.8,
                   child: Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,10 +58,10 @@ class _SingleReviewState extends State<SingleReview> {
                   ),
                 ),
                 SizedBox(
-                  height: ScreenSize.deviceHeight * 0.006,
+                  height: ScreenSize.screenHeight * 0.006,
                 ),
                 SizedBox(
-                  width: ScreenSize.deviceWidth * 0.8,
+                  width: ScreenSize.screenWidth * 0.8,
                   child: Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -111,14 +111,14 @@ class _SingleReviewState extends State<SingleReview> {
         ),
       ),
       SizedBox(
-        height: ScreenSize.deviceHeight * 0.015,
+        height: ScreenSize.screenHeight * 0.015,
       ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SizedBox(
-          width: ScreenSize.deviceWidth,
+          width: ScreenSize.screenWidth,
           child: SizedBox(
-            width: ScreenSize.deviceWidth,
+            width: ScreenSize.screenWidth,
             child: ReadMoreText(
               "Faut réviser vos desings la qualité est au rendez-vous mais la conception faut mettre un peu plus de créativité, bon courage",
               trimLines: 3,

@@ -35,12 +35,12 @@ class _ProductDetailsState extends State<ProductDetails> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            height: ScreenSize.deviceHeight * 0.02,
+            height: ScreenSize.screenHeight * 0.02,
           ),
           Stack(children: [
             Container(
-              height: ScreenSize.deviceHeight * 0.6,
-              width: ScreenSize.deviceWidth,
+              height: ScreenSize.screenHeight * 0.6,
+              width: ScreenSize.screenWidth,
               decoration: const BoxDecoration(
                 color: AppColors.primaryColor,
                 image: DecorationImage(
@@ -66,13 +66,13 @@ class _ProductDetailsState extends State<ProductDetails> {
             ),
           ]),
           SizedBox(
-            height: ScreenSize.deviceHeight * 0.01,
+            height: ScreenSize.screenHeight * 0.01,
           ),
           Expanded(
             child: SingleChildScrollView(
               child: Container(
                 margin: EdgeInsets.symmetric(
-                    horizontal: ScreenSize.deviceWidth * 0.03),
+                    horizontal: ScreenSize.screenWidth * 0.03),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -109,12 +109,12 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ],
                     ),
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.02,
+                      height: ScreenSize.screenHeight * 0.02,
                     ),
                     //? Product Images
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.15,
-                      width: ScreenSize.deviceWidth,
+                      height: ScreenSize.screenHeight * 0.15,
+                      width: ScreenSize.screenWidth,
                       child: ListView(
                         physics: const PageScrollPhysics(),
                         scrollDirection: Axis.horizontal,
@@ -166,8 +166,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                     ),
 
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.08,
-                      width: ScreenSize.deviceWidth,
+                      height: ScreenSize.screenHeight * 0.08,
+                      width: ScreenSize.screenWidth,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: const [
@@ -203,7 +203,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     ),
                     //? Product Description
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.02,
+                      height: ScreenSize.screenHeight * 0.02,
                     ),
                     Text("Description",
                         style: GoogleFonts.inter(
@@ -211,11 +211,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                             fontWeight: FontWeight.w600,
                             color: AppColors.textColor)),
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.01,
+                      height: ScreenSize.screenHeight * 0.01,
                     ),
                     // ? Product Description
                     SizedBox(
-                      width: ScreenSize.deviceWidth,
+                      width: ScreenSize.screenWidth,
                       child: ReadMoreText(
                         "Plongez au cœur de l’essence vibrante de l’Afrique avec notre collection exclusive célébrant la passion du football lors de la Coupe d’Afrique 2024. Inspirée par la richesse culturelle et la diversité du continent, chaque pièce incarne l’énergie effervescente et la vivacité des nations africaines.",
                         trimLines: 3,
@@ -228,7 +228,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ),
                     ),
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.02,
+                      height: ScreenSize.screenHeight * 0.02,
                     ),
                     // ? Product Reviews
                     Row(
@@ -248,15 +248,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ],
                     ),
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.01,
+                      height: ScreenSize.screenHeight * 0.01,
                     ),
                     //* Product Single Review
                     SizedBox(
-                      width: ScreenSize.deviceWidth,
+                      width: ScreenSize.screenWidth,
                       child: const SingleReview(),
                     ),
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.02,
+                      height: ScreenSize.screenHeight * 0.02,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -274,7 +274,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ],
                     ),
                     SizedBox(
-                      height: ScreenSize.deviceHeight * 0.01,
+                      height: ScreenSize.screenHeight * 0.01,
                     )
                   ],
                 ),

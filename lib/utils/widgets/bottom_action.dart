@@ -18,7 +18,7 @@ class BottomAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: ScreenSize.deviceHeight * 0.1,
+        height: ScreenSize.screenHeight * 0.1,
         decoration: const BoxDecoration(
           color: AppColors.backgroundColor,
         ),

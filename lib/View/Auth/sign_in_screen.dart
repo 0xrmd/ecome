@@ -60,12 +60,12 @@ class _SignInScreenState extends State<SignInScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.06,
+              height: ScreenSize.screenHeight * 0.06,
             ),
             Row(
               children: [
                 SizedBox(
-                  width: ScreenSize.deviceWidth * 0.035,
+                  width: ScreenSize.screenWidth * 0.035,
                 ),
                 Container(
                   decoration: const BoxDecoration(
@@ -86,7 +86,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.005,
+              height: ScreenSize.screenHeight * 0.005,
             ),
             Center(
               child: Text("Please Enter Your Data To Continue",
@@ -98,7 +98,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   )),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.05,
+              height: ScreenSize.screenHeight * 0.05,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -111,7 +111,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   )),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -123,7 +123,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   keyboardType: TextInputType.emailAddress,
                 )),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -136,7 +136,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   )),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -148,7 +148,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   keyboardType: TextInputType.visiblePassword,
                 )),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,

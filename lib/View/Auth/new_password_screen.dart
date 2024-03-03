@@ -45,12 +45,12 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.06,
+              height: ScreenSize.screenHeight * 0.06,
             ),
             Row(
               children: [
                 SizedBox(
-                  width: ScreenSize.deviceWidth * 0.035,
+                  width: ScreenSize.screenWidth * 0.035,
                 ),
                 Container(
                   decoration: const BoxDecoration(
@@ -65,7 +65,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               ],
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.005,
+              height: ScreenSize.screenHeight * 0.005,
             ),
             Center(
               child: Text(
@@ -77,7 +77,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               ),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.1,
+              height: ScreenSize.screenHeight * 0.1,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -90,7 +90,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   )),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -102,7 +102,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   keyboardType: TextInputType.visiblePassword,
                 )),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.03,
+              height: ScreenSize.screenHeight * 0.03,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -115,7 +115,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   )),
             ),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -127,7 +127,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   keyboardType: TextInputType.visiblePassword,
                 )),
             SizedBox(
-              height: ScreenSize.deviceHeight * 0.02,
+              height: ScreenSize.screenHeight * 0.02,
             ),
             Center(
               child: Text(

@@ -23,7 +23,7 @@ class _CategoryState extends State<Category> {
       onTap: widget.onTap,
       child: Container(
         alignment: Alignment.center,
-        width: ScreenSize.deviceWidth * 0.4,
+        width: ScreenSize.screenWidth * 0.4,
         margin: const EdgeInsets.symmetric(
           horizontal: 5,
         ),
@@ -52,7 +52,7 @@ class _CategoryState extends State<Category> {
                 ),
               ),
               SizedBox(
-                width: ScreenSize.deviceWidth * 0.05,
+                width: ScreenSize.screenWidth * 0.05,
               ),
               Text(
                 widget.categoryName,

@@ -1,5 +1,4 @@
 import 'package:ecome/Models/view%20Model/screen_size.dart';
-import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:ecome/utils/widgets/add_review.dart';
 import 'package:ecome/utils/widgets/back_button.dart';
 import 'package:ecome/utils/widgets/single_product_review.dart';
@@ -27,7 +26,7 @@ class AllReviews extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.07,
+                height: ScreenSize.screenHeight * 0.07,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -83,10 +82,10 @@ class AllReviews extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight * 0.03,
+                height: ScreenSize.screenHeight * 0.03,
               ),
               SizedBox(
-                height: ScreenSize.deviceHeight,
+                height: ScreenSize.screenHeight,
                 child: ListView.builder(
                   itemCount: 6,
                   itemBuilder: (context, index) {
