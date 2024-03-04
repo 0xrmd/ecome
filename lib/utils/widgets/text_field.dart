@@ -12,7 +12,7 @@ class CustomTextField extends StatefulWidget {
     required this.isSearch,
     this.focusBorder,
     this.enableBorder,
-     this.padding,
+    this.padding, required this.onChanged,
   });
   final String labelText;
   TextEditingController controller = TextEditingController();
@@ -22,6 +22,7 @@ class CustomTextField extends StatefulWidget {
   InputBorder? focusBorder;
   InputBorder? enableBorder;
   final EdgeInsets? padding;
+  final Function(String) onChanged;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -46,6 +47,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return TextFormField(
       obscureText: widget.isPassword ? isObscure : false,
       controller: widget.controller,
+      onChanged: widget.onChanged,
       decoration: InputDecoration(
         hintText: widget.labelText,
         hintStyle: const TextStyle(

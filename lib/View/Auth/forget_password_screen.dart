@@ -91,7 +91,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   labelText: 'Email Address',
                   controller: emailController,
                   isPassword: false,
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType: TextInputType.emailAddress, onChanged: (String ) {  },
                 )),
             SizedBox(
               height: ScreenSize.screenHeight * 0.02,

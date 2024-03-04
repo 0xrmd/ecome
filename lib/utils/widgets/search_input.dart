@@ -1,10 +1,17 @@
 import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:ecome/utils/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SearchInput extends StatefulWidget {
   final TextEditingController searchController;
-  const SearchInput({super.key, required this.searchController});
+  final Function()? onMicPressed;
+  final Function(String) onChanged;
+  const SearchInput(
+      {super.key,
+      required this.searchController,
+      this.onMicPressed,
+      required this.onChanged});
 
   @override
   State<SearchInput> createState() => _SearchInputState();
@@ -14,7 +21,7 @@ class _SearchInputState extends State<SearchInput> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(right: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -36,19 +43,23 @@ class _SearchInputState extends State<SearchInput> {
                   controller: widget.searchController,
                   isPassword: false,
                   keyboardType: TextInputType.text,
+                  onChanged: widget.onChanged,
                 ),
               ),
             ),
           ),
-          Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-                color: AppColors.backgroundColor,
-                borderRadius: BorderRadius.circular(5)),
-            child: const Icon(
-              Icons.mic,
-              color: AppColors.primaryColor,
+          GestureDetector(
+            onTap: widget.onMicPressed,
+            child: Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  color: AppColors.backgroundColor,
+                  borderRadius: BorderRadius.circular(10)),
+              child: const Icon(
+                Icons.mic,
+                color: AppColors.primaryColor,
+              ),
             ),
           )
         ],

@@ -16,13 +16,18 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomSheet: BottomAction(
-        onPressed: () {},
+        onPressed: () {
+          
+        },
         actionText: 'Checkout',
       ),
       appBar: AppBar(
         elevation: 0,
         leading: ArrowBackButton(
-            icon: const Icon(Icons.arrow_back), onPressed: () {}),
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         title: const Text(
           'Cart',
           style: TextStyle(

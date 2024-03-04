@@ -60,7 +60,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                   secondIcon: SvgPicture.asset("assets/icons/Cart.svg"),
                   firstIconOnPressed: () {},
                   secondIconOnPressed: () {},
-                  context: context,
                 ),
               ),
             ),

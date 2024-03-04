@@ -102,6 +102,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: userNameController,
                     isPassword: false,
                     keyboardType: TextInputType.name,
+                    onChanged: (String) {}
                   )),
               SizedBox(
                 height: ScreenSize.screenHeight * 0.03,
@@ -127,6 +128,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: passwordController,
                     isPassword: true,
                     keyboardType: TextInputType.visiblePassword,
+                    onChanged: (String) {}
                   )),
               SizedBox(
                 height: ScreenSize.screenHeight * 0.03,
@@ -150,6 +152,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: emailController,
                     isPassword: false,
                     keyboardType: TextInputType.emailAddress,
+                    onChanged: (String) {}
                   )),
               SizedBox(
                 height: ScreenSize.screenHeight * 0.03,

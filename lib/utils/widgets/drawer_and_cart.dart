@@ -3,14 +3,13 @@ import 'package:ecome/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class DrawerCartWidget extends StatelessWidget {
-  final BuildContext context;
   final Widget firstIcon;
   final Widget secondIcon;
   final Function() firstIconOnPressed;
   final Function() secondIconOnPressed;
+
   const DrawerCartWidget({
     super.key,
-    required this.context,
     required this.firstIcon,
     required this.secondIcon,
     required this.firstIconOnPressed,

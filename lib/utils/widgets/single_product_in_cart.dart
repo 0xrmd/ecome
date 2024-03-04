@@ -101,21 +101,6 @@ class SingleProductInCart extends StatelessWidget {
                             height: 25,
                           )),
                     ),
-                    SizedBox(
-                      width: ScreenSize.screenWidth * 0.03,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(color: const Color(0xffDEDEDE))),
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: SvgPicture.asset(
-                          "assets/icons/trash.svg",
-                          width: 15,
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),

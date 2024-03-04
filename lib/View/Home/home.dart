@@ -35,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
         productName: 'Nike Sportswear Club Fleece',
         productPrice: '65'),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,15 +46,23 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: ScreenSize.screenHeight * 0.01,
               ),
-              DrawerCartWidget(
-                context: context,
-                firstIcon: SvgPicture.asset("assets/icons/Menu.svg"),
-                secondIcon: SvgPicture.asset("assets/icons/Cart.svg"),
-                firstIconOnPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                secondIconOnPressed: () {},
-              ),
+              Builder(builder: (context) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                  ),
+                  child: DrawerCartWidget(
+                    firstIcon: SvgPicture.asset("assets/icons/Menu.svg"),
+                    secondIcon: SvgPicture.asset("assets/icons/Cart.svg"),
+                    firstIconOnPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                    secondIconOnPressed: () {
+                      Navigator.pushNamed(context, '/cart');
+                    },
+                  ),
+                );
+              }),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
@@ -76,7 +83,11 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: ScreenSize.screenHeight * 0.02,
               ),
-              SearchInput(searchController: searchController),
+              SearchInput(
+                searchController: searchController,
+                onChanged: (value) {},
+                onMicPressed: () {},
+              ),
               SizedBox(
                 height: ScreenSize.screenHeight * 0.001,
               ),

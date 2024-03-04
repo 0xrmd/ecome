@@ -100,6 +100,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   controller: passwordController,
                   isPassword: false,
                   keyboardType: TextInputType.visiblePassword,
+                  onChanged: (String) {}
                 )),
             SizedBox(
               height: ScreenSize.screenHeight * 0.03,
@@ -125,6 +126,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   controller: confirmPasswordController,
                   isPassword: false,
                   keyboardType: TextInputType.visiblePassword,
+                  onChanged: (String) {}
                 )),
             SizedBox(
               height: ScreenSize.screenHeight * 0.02,
