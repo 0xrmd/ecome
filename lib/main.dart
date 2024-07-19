@@ -1,6 +1,5 @@
 import 'package:ecome/core/utils/constants/screen_size.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ecomerce App UI',
-      theme: ThemeData(
+      theme: ThemeData( 
         useMaterial3: true,
       ),
     );
